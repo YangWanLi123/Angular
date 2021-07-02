@@ -8,6 +8,7 @@ import { Component, Input, OnInit, Output, EventEmitter,ViewChild,ElementRef } f
 export class CustomTreeItemComponent implements OnInit {
   @Input() treeData: Object;
   @Input() treeIndex:number=0;
+  @Input() direction:string='horizontal';
   @Output() event=new EventEmitter();
   @ViewChild('inputElement', { static: false }) inputElement?: ElementRef;
   constructor() { }

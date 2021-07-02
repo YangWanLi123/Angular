@@ -1,7 +1,12 @@
 
 <div class="custom-tree">
     <div class="custom-tree-title">自定义树</div>
+    <div class="custom-tree-subtitle"><i nz-icon nzType="right-square" nzTheme="outline"></i>横向(horizontal)</div>
     <div class="custom-tree-con">
-        <app-custom-tree-item [treeData]="treeData" [treeIndex]="0"></app-custom-tree-item>
+        <app-custom-tree-item [treeData]="treeData" [treeIndex]="0" [direction]="'horizontal'"></app-custom-tree-item>
+    </div>
+    <div class="custom-tree-subtitle"><i nz-icon nzType="down-square" nzTheme="outline"></i>纵向(vertical)</div>
+    <div class="custom-tree-con">
+        <app-custom-tree-item [treeData]="treeDataVertical" [treeIndex]="0" [direction]="'vertical'"></app-custom-tree-item>
     </div>
 </div>
