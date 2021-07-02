@@ -1,0 +1,12 @@
+<div class="tree">
+    <div class="tree-node" [ngClass]="{'tree-node-parent': treeData['children']&&treeData['children'].length}">
+        <nz-tag nzMode="closeable" (nzOnClose)="onClose()" *ngIf="!treeData['isEdit']" (click)="edit()">{{treeData['name']}}</nz-tag>
+        <input #inputElement nz-input placeholder="请输入" [(ngModel)]="treeData['name']" *ngIf="treeData['isEdit']" (blur)="treeData['isEdit']=!treeData['isEdit']" />
+        <i nz-icon nzType="plus-circle" nzTheme="outline" class="tree-node-action" [ngClass]="{'leaf':!treeData['children']||!treeData['children'].length}" (click)="addChildNode()" title="添加子节点"></i>
+    </div>
+    <div class="tree-child" *ngIf="treeData['children']&&treeData['children'].length">
+        <div class="tree-child-item" [ngClass]="{'tree-child-item-sibling': treeData['children']&&treeData['children'].length>1}" *ngFor="let child of treeData['children'];index as i;">
+            <app-custom-tree-item [treeData]="child" [treeIndex]="i" (event)="deleteTreeNode($event)"></app-custom-tree-item>
+        </div>
+    </div>
+</div>

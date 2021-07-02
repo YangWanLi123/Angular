@@ -1,0 +1,99 @@
+.tree {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &-node {
+    position: relative;
+    height: 32px;
+    .ant-input {
+      width: 100px;
+    }
+    .ant-tag{
+      position: relative;
+      width: 100px;
+      padding: 0 11px;
+      margin: 0;
+      height: 32px;
+      line-height: 30px;
+      background-color: #fff;
+      /deep/ .ant-tag-close-icon{
+        position: absolute;
+        top: 10px;
+        right: 3px;
+        margin-left: 0;
+      }
+    }
+    margin-right: 64px;
+    &-action{
+      position: absolute;
+      right: -30px;
+      top: 0;
+      cursor: pointer;
+      &.leaf{
+        top: 9px;
+      }
+    }
+  }
+
+  &-node-parent {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      right: -48px;
+      top: 16px;
+      content: '';
+      width: 48px;
+      height: 1px;
+      background: #ddd;
+    }
+  }
+
+  &-child {
+    position: relative;
+
+
+
+    &-item {
+      position: relative;
+      margin: 4px 0;
+
+      &::before {
+        position: absolute;
+        left: -16px;
+        top: 50%;
+        content: '';
+        width: 16px;
+        height: 1px;
+        background: #ddd;
+      }
+    }
+    &-item-sibling {
+        &::after {
+          position: absolute;
+          bottom: -4px;
+          top: -4px;
+          left: -16px;
+          content: '';
+          width: 1px;
+          background: #ddd;
+        }
+  
+        &:first-child {
+          &::after {
+            bottom: -4px;
+            top: 50%;
+          }
+        }
+        &:last-child {
+          &::after {
+            top: -4px;
+            bottom: 50%;
+          }
+        }
+      }
+  }
+}
