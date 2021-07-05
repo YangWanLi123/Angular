@@ -1,0 +1,17 @@
+<div class="custom-draggable">
+    <div class="custom-draggable-title">自定义拖拽</div>
+    <div class="custom-draggable-desc">
+        <i nz-icon nzType="double-right" nzTheme="outline"></i>
+        <span>知识点：</span>
+    </div>
+    <div class="custom-draggable-desc">
+        <div>1、angular指令的创建；</div>
+        <div>2、HostListener的使用；</div>
+        <div>3、Renderer2的使用；</div>
+        <div>4、鼠标位置和元素位移的设置；</div>
+        <div>5、若实现更复杂的拖拽功能，可以使用<a href="https://www.npmjs.com/package/ng-drag-drop">ng-drag-drop</a>；</div>
+    </div>
+    <div class="custom-draggable-con">
+        <div class="box" [appDraggable]="[16,16]"></div>
+    </div>
+</div>

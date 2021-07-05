@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CustomTreeComponent } from './pages/custom-tree/custom-tree.component';
+import { CustomDraggableComponent } from './pages/custom-draggable/custom-draggable.component';
 
 const routes: Routes = [
   { path: 'tree', component: CustomTreeComponent },
-  { path: '', pathMatch: 'full', redirectTo: '/tree' },
-  { path: 'welcome', loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomeModule) }
+  { path: 'draggable', component: CustomDraggableComponent },
+  { path: '', pathMatch: 'full', redirectTo: '/tree' }
 ];
 
 @NgModule({

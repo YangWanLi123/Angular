@@ -15,13 +15,17 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { zh_CN } from 'ng-zorro-antd/i18n';
 import { CustomTreeComponent } from './pages/custom-tree/custom-tree.component';
 import { CustomTreeItemComponent } from './pages/custom-tree/custom-tree-item/custom-tree-item.component';
+import { CustomDraggableComponent } from './pages/custom-draggable/custom-draggable.component';
+import { DraggableDirective } from './directive/draggable.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomTreeComponent,
-    CustomTreeItemComponent
+    CustomTreeItemComponent,
+    CustomDraggableComponent,
+    DraggableDirective
   ],
   imports: [
     BrowserModule,
